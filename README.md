@@ -4,9 +4,9 @@ This created with the ionic framework.
 
 ###### Install the project:     
 1. Install an empty [ionic](http://ionicframework.com/docs/guide/installation.html) project called Bearly.    
-..1	sudo npm install -g cordova ([Requires Node.js](https://nodejs.org/en/))
-..2 sudo npm install -g ionic
-..3	ionic start Bearly blank
+  1	sudo npm install -g cordova ([Requires Node.js](https://nodejs.org/en/))
+  2 sudo npm install -g ionic
+  3	ionic start Bearly blank
 2. Choose wheter or not to use sass.  
 3. Copy the contents of this repo into www.  
 4. Set up your own [Firebase](https://www.firebase.com/) database and make a "firebase_api_keys.js" in your WWW folder.  
