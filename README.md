@@ -2,6 +2,8 @@
 Student project. Bear puns and beer. Frameworks: ionic, cordova, angular. Backend: Firebase.    
 This created with the ionic framework.   
 
+![alt tag](https://raw.githubusercontent.com/RonjaKnudtsen/Bearly/master/img/bearly-big.png)
+
 ###### Install the project:     
 1. Install an empty [ionic](http://ionicframework.com/docs/guide/installation.html) project called Bearly.    
   a. sudo npm install -g cordova ([Requires Node.js](https://nodejs.org/en/))  
