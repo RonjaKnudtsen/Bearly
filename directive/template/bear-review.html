@@ -1,0 +1,33 @@
+<div class="list card" ui-sref="bear({bearId: review.$id})" ng-repeat="review in reviews | filter: {$id: oneItem} | filter: {authors: authorId} | filter: search"><!--  | orderBy : 'timestamp' :true-->
+
+      <div class="item item-avatar">
+  		    <img src="{review.author.avatar}">
+  		    <h2>{{review.name}}</h2>
+  		    <p>{{review.timestamp | date: format : short}} </p>
+		  </div>
+		  <div class="item item-image">
+    		<img class="full-image" src="{{review.img}}">
+    	</div>
+    	<div ng-show="oneItem" class="item item-body item-text-wrap">
+    		<h2>{{review.comment}}</h2>
+       <!-- <pre>
+         {{review | json}}
+        </pre>-->
+       </div>
+        <flex>
+        <star-rating type="'taste'" layout="vertical" value="review.assessment.taste" read-only="true"></star-rating>      
+        <star-rating type="'look'" layout="vertical" value="review.assessment.look" read-only="true" ></star-rating>
+        <star-rating type="'price'" layout="vertical" value="review.assessment.price" read-only="true"></star-rating>
+      </flex>
+      <div ng-show="oneItem" class="item item-body item-text-wrap">
+    		  <div ng-show="oneItem" class="subdued" ng-repeat="drink in drinks | filter:review.drinkId">
+      		<p><b>Name:</b> {{drink.name}}</br>
+      		<b>Type drikke:</b> {{drink.type}} - {{drink.subtype}}.</br>
+      		<b>Alcohol by volume:</b> {{drink.abv}}</br>
+      		<b>Farge:</b> {{drink.color}}</br>
+      		<b>Produsent:</b> {{drink.manufacturer}}</br>
+      		<b>Opprinelses sted:</b> {{drink.placeOfOrigin}}</br>  		
+    		</div>  	
+        </div>
+  
+  </div>

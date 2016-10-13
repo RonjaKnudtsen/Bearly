@@ -1,0 +1,36 @@
+<ion-view title="Bearly there" hide-back-button="false">
+  <ion-content class="padding" id="fullColor">
+	<form  name="loginForm" ng-controller="login-controller"
+       novalidate>
+      <div class="list list-inset">
+  		<label ng-show="registerform" class="item item-input" for="username">
+  			<input type="text" id="username" ng-model="credentials.username" placeholder="Username">
+  		</label>
+  		<label class="item item-input" for="username">
+  			<input type="text" id="email" ng-model="credentials.email" placeholder="Email address">
+  		</label>
+  		<label class="item item-input" for="password">
+ 	 		<input type="password" id="password" ng-model="credentials.password" placeholder="Password">
+   		</label>
+   		<label ng-show="registerform" class="item item-input" for="password">
+ 	 		<input type="password" id="vertify" ng-model="credentials.vertify" placeholder="Vertify password">
+   		</label> <!-- when ng-register is true, it will be unhidden-->
+  </div>
+  <button ng-click="login(credentials)" ng-class="loginclass" type="submit" class="button button-full button-positive">Login</button>
+  <button ng-click="register(credentials)" ng-class="registerclass" class=" button-small button button-full button-positive">Register with email</button>
+  <button class="button button-small button-clear button-full button-positive">Register with Facebook</button>
+ <!-- <button ng-click="logout()" class="button button-full button-assertive">Log out</button> -->
+  
+</form>
+
+
+
+</ion-view>
+
+
+<ion-footer-bar class="bearlybar">
+<div class="bearlybox">
+<div class="bear-image">
+</div>
+</div>
+</ion-footer-bar>

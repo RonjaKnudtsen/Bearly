@@ -1,0 +1,53 @@
+<ion-view title="Create a new review">
+  <ion-content class="padding">
+    <form ng-model="review">
+      <div class="list">
+      
+        <!-- Select bear, write name and a selectlist appears -->
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Bear</span>
+          <input placeholder="Write the name of the bear so we can find it for you" ng-click="boxHidden = false" name="review.drink" ng-keydown="boxHidden = false" ng-model="review.drink" type="text"></input>
+        </label>   
+        <ul class="list dropdown" ng-hide="boxHidden">
+          <li class="item" ng-click="select(drink); boxHidden = true;"  ng-repeat="drink in drinks | filter: review.drink">{{drink.name }}</li>
+        </ul>
+
+        <!-- Write review..-->
+        <label class="item item-input item-stacked-label">
+          <i class="input-label">Review</i>
+          <textarea rows="5" placeholder="I just love this bear" name="review.description" ng-model="review.description" ></textarea>
+        </label> 
+
+        <!-- Take picture-->
+        <div class="item">  
+          <button class="button button-calm" ng-click="takePicture()">Take new picture</button>
+          <button class="button button-positive">Upload picture</button>
+        </div>
+        <div class="item">
+            <img ng-show="review.imgURI !== undefined" ng-src="{{imgURI}}">
+            <img ng-show="review.imgURI === undefined" ng-src="http://placehold.it/300x300">
+        </div>
+
+        <!-- Rate bear-->        
+        <star-rating type="'taste'" layout="horizontal" value="review.tasteRating"></star-rating>      
+        <star-rating type="'look'" layout="horizontal" value="review.lookRating"></star-rating>
+        <star-rating type="'price'" layout="horizontal" value="review.priceRating"></star-rating>
+
+        <!-- Extra info -->          
+        <label class="item item-input item-stacked-label">          
+          <span class="input-label">Fits for occasion</span>
+          <input placeholder="Hibernation" = false" name=" ng-model="review.occasion" type="text"></input>
+        </label>
+        <label class="item item-input item-stacked-label">          
+          <span class="input-label">Best drinked when eating</span>
+          <input placeholder="Honney and blueberries" = false" name=" ng-model="review.food" type="text"></input>
+        </label>  
+      </div>        
+      
+      <!-- Submit -->    
+      <button class="button button-full button-balanced" ng-click="publish()">Publish</button>
+      <p>Don't worry, you can always edit it afterwards </p>  
+
+    </form>
+  </ion-content>
+</ion-view>

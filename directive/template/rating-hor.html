@@ -1,0 +1,11 @@
+<div class="item item-input item-stacked-label">
+	<i class="input-label"><capitalize>{{type}}</capitalize> rating</i>
+	<div class="rating">
+		<div class="type">
+			<i class="icon bearlyicon {{type}} input-label"></i>
+		</div>
+		<div class="star-wrap" ng-repeat="star in stars" ng-click="rate($index)">		
+			<i class="star {{star.class}}"></i>
+		</div>		
+	</div>
+</div>

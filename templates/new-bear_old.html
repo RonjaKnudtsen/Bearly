@@ -1,0 +1,70 @@
+<ion-view title="New review">
+  <ion-content class="padding">
+    <form ng-model="review">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Tittel</span>
+          <input type="text" placeholder="Superdigg ingefærøl!">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Drikke</span>
+
+          <input placeholder="Skriv navnet på drikken slik at vi kan finne den for deg" ng-click="boxHidden = false" name="review.drink" ng-keydown="boxHidden = false" ng-model="review.drink" type="text"></input>
+        </label>   
+        <ul class="list dropdown" ng-hide="boxHidden">
+          <li class="item" ng-click="select(drink); boxHidden = true;"  ng-repeat="drink in drinks | filter: review.drink">{{drink.name }}</li>
+        </ul>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Anmeldelse</span>
+          <!--<p>Gjerne begrunn din vurdering og del dine subjektive synspunkter.</p>-->
+          <textarea  rows="5" placeholder="Jeg bare elsker ingefærøl" name="review.description" ng-model="review.description" ></textarea>
+        </label> 
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Tagging</span>
+          <!--<p>Velg opptil 6 beskrivende ord, separer med komma</p>-->
+          <textarea  rows="2" placeholder="GingerBeer, GingerBeer4Life, Voksendrikke" name="review.description" ng-model="review.description" ></textarea>
+        </label>   
+      </div>
+    <h4><center>På en skala fra 1 til 10</center></h4>
+    <ul class="list">
+      <li class="item">Smak: 1 2 3 4 5 6 7 8 9 10</li>
+      <li class="item">Utseende: 1 2 3 4 5 6 7 8 9 10</li>
+      <li class="item">Pris: 1 2 3 4 5 6 7 8 9 10</li>
+    </ul>
+  </form>
+  </ion-content>
+</ion-view>
+
+<!--<ion-view title="New bear">
+  <ion-content class="padding">
+  <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Navn på drikken</span>
+      <input type="text" placeholder="Corona">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Kategori</span>
+      <input type="text" placeholder="Øl, whiskey, brennevin?">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Tags</span>
+      <input type="text" placeholder="Maks fire beskrivende ord">
+    </label>
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Vurdering</span>
+        <div class=" range range-positive">
+      <i class="icon ion-ios-heart-outline"></i>
+      <input type="range" name="volume" min="1" max="4" value="1">
+      <i class="icon ion-ios-heart"></i>
+      </div>
+    </label>
+    </label>
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Din personlige kommentar</span>
+      <textarea placeholder="Jeg synes at.."></textarea>
+    </label>
+  </div>
+
+
+  </ion-content>
+    </ion-view>-->

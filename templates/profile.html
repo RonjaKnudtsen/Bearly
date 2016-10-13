@@ -1,0 +1,28 @@
+<ion-view title="<capitalize>{profile.username}</capitalize>">
+  <ion-content class="padding">
+  <div class="profile-data">
+	  <div class="profile-picture"><img src="{{profile.profilepicture}}"></div>
+	  <h1>{{profile.username}}</h1>
+	  <p>{{profile.nrOfReviews}} reviews</p>
+	  <p>Gjennomsnitt score: {{profile.averageScore}}</p>
+  </div>
+  <div class="throphies">
+ 		 <!-- Load throphy directive, send profile uid.-->
+  		<throphies user="{profile.uid}"></throphies>
+  </div>
+  <div class="friends">
+   		<!-- Load friend directive, send profile uid.-->
+  		<friends user="{profile.uid}"></friends>
+  </div>
+  <div class="reviews">
+   		<!-- Load friend directive, send profile uid.-->
+  		<bear-review author="profile.uid"></bear-review>
+  </div>
+
+  <a ui-sref="logout">Log out</a>
+
+
+
+  </ion-content>
+
+</ion-view>
