@@ -19,7 +19,7 @@ This created with the ionic framework.
 3. Run "ionic build ios" or "ionic build android"  
   a. You need a mac to build for ios  
   b. You need Android Studio with SDK platform, build tools and Java JDK.  
-  b2. For android: JAVA_HOME path needs to be set to your Java JDK folder.  [JAVA_HOME for Windows](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)
+  b2. For android: JAVA_HOME path needs to be set to your Java JDK folder.  [JAVA_HOME for Windows](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)  
   b3. The Java and Android studio sdk needs to match. 
   
 ###### The firebase_api_keys.js should contain:  
