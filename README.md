@@ -22,6 +22,8 @@ This created with the ionic framework.
   b2. For android: JAVA_HOME path needs to be set to your Java JDK folder.  [JAVA_HOME for Windows](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)  
   b3. The Java and Android studio sdk needs to match. 
   
+If you have any problems with building for android it might work if you uninstall the android 24 sdk (from android studio), and only use android 23 sdk.
+  
 ###### The firebase_api_keys.js should contain:  
 ```
 //connects the constants to the services module.  
