@@ -39,6 +39,7 @@ app.constant('storageBucket', ' yourstoragebucket');
 1. Firebase upload. Camera pictures will not upload to firebase.
 2. When a new user is logged in, the "My profile" is not updated.
 3. Make it possible to create a new drink which is not in the database. This drink should be marked as unfinished until it has been validated and added metadata.
+4. Move the services and factories out of app.js (clean up the code)
 
 ###### Database/metadata:
 1. Add more drinks to the database.
