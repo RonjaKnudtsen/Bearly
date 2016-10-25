@@ -1,4 +1,4 @@
-# Bearly
+# Bearly (Work in progress)
 Student project. Bear puns and beer. Frameworks: ionic, cordova, angular. Backend: Firebase.    
 This created with the ionic framework.   
 
@@ -33,3 +33,16 @@ app.constant('firebaseApiKey', ' yourfirebaseapikey' );
 app.constant('firebaseAuthDomain', ' yourfirebaseauthdomain');  
 app.constant('storageBucket', ' yourstoragebucket');  
 ```
+
+# Priority fixes
+###### Services:
+1. Firebase upload. Camera pictures will not upload to firebase.
+2. When a new user is logged in, the "My profile" is not updated.
+3. Make it possible to create a new drink which is not in the database. This drink should be marked as unfinished until it has been validated and added metadata.
+
+###### Database/metadata:
+1. Add more drinks to the database.
+2. Map out if more metadata should be added or removed.
+
+
+
