@@ -1,6 +1,6 @@
 # Bearly (Work in progress)
 Student project. Bear puns and beer. Frameworks: ionic, cordova, angular. Backend: Firebase.    
-This created with the ionic framework.   
+Created with the ionic framework.   
 
 ![alt tag](https://raw.githubusercontent.com/RonjaKnudtsen/Bearly/master/img/bearly-big.png)
 
